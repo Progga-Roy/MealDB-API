@@ -9,52 +9,44 @@
     <title>Meal DB </title>
 </head>
 <body>
-    
-
+  <main>
 <section>
-    <h2>Welcome to MealDB. Choose our food for meal.</h2>
-
-    <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- <div class="col"> -->
-        <!-- <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div> -->
-      <!-- </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a short card.</p>
-          </div>
+    <h2 class="text-center mt-3">Welcome to MealDB. Choose our food for meal.</h2>
+  
+    <nav class="navbar mt-3">
+      <div class="container-fluid">
+        <div class="d-flex  w-75 mx-auto" role="search">
+          <input id="search-field" class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+          <button onclick="searchMeal()" class="btn btn-outline-success" type="submit">Search</button>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    </nav>
+    <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4 mt-5 w-75 mx-auto">
+       <!-- <div class="col">
+   
+       </div> -->
+    </div>
 
 </section>
 
+<div class="modal fade" id="mealDB" tabindex="-1" aria-labelledby="mealDBLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="mealDBLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="mealDetailBody" class="modal-body">
+        <img src="" alt="" srcset="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
 
 
 
