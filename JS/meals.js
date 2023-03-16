@@ -19,7 +19,7 @@ const displayMeal = (meals) => {
         <div class="card-body">
           <h5 class="card-title">${meal.strMeal}</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ab error quasi quidem ea velit sunt reprehenderit optio voluptatum sed?</p>
-          <button onclick="loadMealDetail(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mealDB">
+          <button onclick="loadMealDetail2(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mealDB">
              Details
           </button>
         </div>
@@ -38,9 +38,20 @@ const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
 fetch(url)
 .then(res=>res.json())
 .then(data=> displayMealDetail(data.meals[0]))
+.catch(error=> console.log(error))
 
 }
-
+const loadMealDetail2 = async(idMeal)=>{
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
+  try{
+    const res = await fetch(url)
+    const data = await res.json()
+    displayMealDetail(data.meals[0])
+  } 
+  catch(error){
+console.log(error)
+  }
+}
 
 const displayMealDetail =meal=>{
 document.getElementById('mealDBLabel').innerText = meal.strMeal;
